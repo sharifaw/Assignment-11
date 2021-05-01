@@ -1,0 +1,123 @@
+
+const message = 'hello';
+foo();
+
+function foo() {
+	alert(message);
+}
+
+// the code execute and the output is hello because we can call a function before we declare it 
+_______________________________________________________________________________
+
+const message = 'hello';
+foo(message);
+
+function foo() {
+	let message = 'hi'
+	alert(message);
+}
+
+//the code executes and the output is hi which is inside the function is executed depending on local variables, here we identify a message as a local variable and call it inside alert, so the output will depend on the local variable.
+________________________________________________________________________________________
+
+foo();
+
+const message = 'hello';
+
+function foo() {
+	alert(message);
+}
+
+// the code won't execute because we call the const message after we called the function and this function is depending on the global variable (message), so here it didn't executed because the function call searching for a varaible before it not after it.
+_______________________________________________________________________________
+
+
+foo();
+
+function foo() {
+	alert(message);
+}
+
+var message = 'hello';
+
+// in this case, usually, the code will not be executed, but here we used hoisted var and here it defines the value but didn't define the initial value. because if we tried to change the var to (let;) without an initial value it will return undefined.
+_____________________________________________________________________________________________
+
+
+if (true) {
+	let message = 'hello';
+}
+
+alert(message);
+
+// the code won't execute because the let message is a local variable and it is looking for a local and the alert message is not inside the if statement.
+____________________________________________________________________
+
+
+if (true) {
+	var message = 'hello';
+}
+
+alert(message);
+
+// the output is hello because var is not like let which means it doesn't have something called local variable.
+______________________________________________________________________________
+
+{
+	let message = 'hello';
+	message = 'hi';
+}
+
+alert(message);
+
+// the code won't executed because the message is define into the scope (between {}).
+_________________________________________________________________________
+
+let message = 'hello';
+
+{
+	message = 'hi';
+}
+
+alert(message);
+
+// the output will be hi because we defined a global variable and the scope will change it.
+___________________________________________________________________________
+
+foo();
+
+function foo() {
+	{
+		const message = 'hello';
+	}
+	
+	alert(message);
+}
+
+// the code won't executed because the message is define into another scope.
+______________________________________________________________________________
+
+foo();
+
+function foo() {
+	{
+		var message = 'hello';
+	}
+	
+	alert(message);
+}
+
+// var doesn't have a global or local variable so the output will be hello.
+__________________________________________________________________
+
+foo();
+
+function foo() {
+	{
+		var message = 'hello';
+	}
+}
+
+alert(message);
+
+// the code won't executed becaaaaaaause IDK.
