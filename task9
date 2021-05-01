@@ -120,4 +120,4 @@ function foo() {
 
 alert(message);
 
-// the code won't executed becaaaaaaause IDK.
+
